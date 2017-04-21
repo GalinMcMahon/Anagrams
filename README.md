@@ -15,6 +15,7 @@ Program receives a word and an anagram of that word then checks that it is a val
 | Receive two words from user | "stop", "tops" | "stop", "tops" |
 | Check if the two words are anagrams | "stop", "tops" | true |
 | If above is true, check if it's also a palindrome | "stop" | false |
+| Check for upper or lower case so that mismatched cases are still anagrams | "Stop" | "stop" |
 | Check to see that the inputted words are actually words | "stop" | true |
 | If words aren't anagrams, determine whether they're antigrams | "hello", "bats" | true |
 | Apply above to multiple words without spaces or punctuation | "stop now" | "stopnow" |
