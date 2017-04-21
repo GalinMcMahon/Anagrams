@@ -1,7 +1,8 @@
 require('rspec')
-require('./lib/coins')
+require('./lib/anagrams')
 
-describe('String#word') do
+describe('String#anagrams') do
   it("returns true or false based on whether the words are anagrams or not") do
-    expect((stop, tops).words()).to(eq(true))
+    expect("stop".anagrams("spot")).to(eq("These words are anagrams!"))
   end
+end
