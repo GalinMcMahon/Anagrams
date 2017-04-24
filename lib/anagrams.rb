@@ -1,4 +1,15 @@
 class String
+  define_method(:antigrams) do |word2|
+    array1 = []
+    array2 = []
+    array1.push(self.split(""))
+    array2.push(word2.split(""))
+    third_array = array1 & array2
+      third_array
+  end
+end
+
+class String
   define_method(:vowel_check) do
     includes = self.downcase.count 'aeiou'
       if includes >=1
@@ -18,7 +29,7 @@ class String
       returned_output = "These aren't anagrams."
     end
     returned_output
-  end 
+  end
 
   define_method(:palindromes) do
     pal_word1 = self
