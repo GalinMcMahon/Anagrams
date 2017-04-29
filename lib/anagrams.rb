@@ -6,14 +6,21 @@ class String
     array1 = (self).split(//)
     array2 = (word2).split(//)
     array_intersection = array1 & array2
-      array_intersection
-      if array_intersection == []
-        true
-      else
-        false
-      end
+    array_intersection
+    if array_intersection == []
+      true
+    else
+      false
+    end
   end
 
+  define_method(:whitespace) do |word2|
+    word1 = self.gsub(/\s+/, "")
+      if word2 != ""
+        word2 = word2.gsub(/\s+/, "")
+      else
+      end
+  end
 
   define_method(:vowel_check) do
     includes = self.downcase.count 'aeiou'

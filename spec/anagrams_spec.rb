@@ -31,5 +31,11 @@ describe('String')
     end
   end
 
+  describe('#whitespace') do
+    it("removes white space before checking any of the above methods") do
+      expect(" hello there ".whitespace(" hello there ")).to(eq("hellothere"))
+    end
+  end
+
 
 end
