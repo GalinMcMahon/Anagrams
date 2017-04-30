@@ -11,5 +11,6 @@ get('/result') do
   @word1 = params.fetch('input1').downcase()
   @word2 = params.fetch('input2').downcase()
   @result = @word1.anagrams(@word2)
+  @result_anti = @word1.antigrams(@word2)
   erb(:result)
 end

@@ -11,6 +11,16 @@ describe('anagrams', {:type => :feature}) do
     fill_in('input1', :with => 'stop')
     fill_in('input2', :with => 'spot')
     click_button('Send')
-    expect(page).to have_content('These words are anagrams!')
+    expect(page).to have_content("These words are anagrams!")
+  end
+end
+
+describe('antigrams', {:type => :feature}) do
+  it('takes user input and determines whether or not it is an antigram') do
+    visit('/')
+    fill_in('input1', :with => 'stop')
+    fill_in('input2', :with => 'jake')
+    click_button('Send')
+    expect(page).to have_content("These words are antigrams (no shared letters)")
   end
 end

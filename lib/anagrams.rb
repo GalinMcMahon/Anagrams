@@ -8,10 +8,11 @@ class String
     array_intersection = array1 & array2
     array_intersection
     if array_intersection == []
-      true
+      anti_output = "These words are antigrams (no shared letters)"
     else
       false
     end
+      anti_output
   end
 
   define_method(:whitespace) do |word2|

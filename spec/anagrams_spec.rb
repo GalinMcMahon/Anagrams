@@ -27,7 +27,7 @@ describe('String')
 
   describe('#antigrams') do
     it("returns a true or false statement based on whether the input words are antigrams") do
-      expect("stop".antigrams("jake")).to(eq(true))
+      expect("stop".antigrams("jake")).to(eq("These words are antigrams (no shared letters)"))
     end
   end
 
