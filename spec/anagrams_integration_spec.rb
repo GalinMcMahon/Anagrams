@@ -34,3 +34,13 @@ describe('vowel_check', {:type => :feature}) do
     expect(page).to have_content("You need to use words with vowels.")
   end
 end
+
+describe('palindromes', {:type => :feature}) do
+  it('takes user input and determines whether or not it is a palindrome') do
+    visit('/')
+    fill_in('input1', :with => 'radar')
+    # fill_in('input2', :with => 'jk')
+    click_button('Send')
+    expect(page).to have_content("Your word is a palindrome")
+  end
+end

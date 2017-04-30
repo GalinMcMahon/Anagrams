@@ -13,5 +13,6 @@ get('/result') do
   @result = @word1.anagrams(@word2)
   @result_anti = @word1.antigrams(@word2)
   @result_vowel = @word1.vowel_check(@word2)
+  @result_palindrome = @word1.palindromes()
   erb(:result)
 end
