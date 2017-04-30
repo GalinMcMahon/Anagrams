@@ -23,12 +23,13 @@ class String
       end
   end
 
-  define_method(:vowel_check) do
+  define_method(:vowel_check) do |word2|
     includes = self.downcase.count 'aeiou'
-      if includes >=1
-        vowel_output = "Good job"
+    includes2 = word2.downcase.count 'aeiou'
+      if includes >=1 && includes2 >=1
+        vowel_output = ""
       else
-        vowel_output = "You need to use real words."
+        vowel_output = "You need to use words with vowels."
       end
       vowel_output
   end

@@ -15,7 +15,7 @@ describe('String')
 
   describe('#vowel_check') do
     it("checks words to make sure a vowel exists") do
-      expect("stop".vowel_check()).to(eq("Good job"))
+      expect("stp".vowel_check("jk")).to(eq("You need to use words with vowels."))
     end
   end
 

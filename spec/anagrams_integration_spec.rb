@@ -24,3 +24,13 @@ describe('antigrams', {:type => :feature}) do
     expect(page).to have_content("These words are antigrams (no shared letters)")
   end
 end
+
+describe('vowel_check', {:type => :feature}) do
+  it('takes user input and determines whether or not it is a real word based on it having at least one vowel') do
+    visit('/')
+    fill_in('input1', :with => 'stp')
+    fill_in('input2', :with => 'jk')
+    click_button('Send')
+    expect(page).to have_content("You need to use words with vowels.")
+  end
+end
