@@ -7,11 +7,9 @@ get('/') do
   erb(:index)
 end
 
- # /title is received from the form
 get('/result') do
-   # @title below is the output which feeds into line 2 of the title.erb
-  @word1 = params.fetch('input1').words()
-  @word2 = params.fetch('input2').words()
-   # :title sends the output TO the title page, aka the GUI output page
+  @word1 = params.fetch('input1').downcase()
+  @word2 = params.fetch('input2').downcase()
+  @result = @word1.anagrams(@word2)
   erb(:result)
 end

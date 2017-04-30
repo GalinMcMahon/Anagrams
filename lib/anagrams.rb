@@ -33,8 +33,8 @@ class String
   end
 
   define_method(:anagrams) do |word2|
-    word1 = self.downcase.chars.sort.join
-    word2 = word2.downcase.chars.sort.join
+    word1 = self.downcase.chars.sort
+    word2 = word2.downcase.chars.sort
     if word1 == word2
       returned_output = "These words are anagrams!"
     else
