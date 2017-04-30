@@ -11,7 +11,7 @@ describe('anagrams', {:type => :feature}) do
     fill_in('input1', :with => 'stop')
     fill_in('input2', :with => 'spot')
     click_button('Send')
-    expect(page).to have_content("These words are anagrams!")
+    expect(page).to have_content(" are anagrams!")
   end
 end
 
@@ -21,7 +21,7 @@ describe('antigrams', {:type => :feature}) do
     fill_in('input1', :with => 'stop')
     fill_in('input2', :with => 'jake')
     click_button('Send')
-    expect(page).to have_content("These words are antigrams (no shared letters)")
+    expect(page).to have_content("But they are antigrams (no shared letters)")
   end
 end
 
@@ -41,6 +41,6 @@ describe('palindromes', {:type => :feature}) do
     fill_in('input1', :with => 'radar')
     # fill_in('input2', :with => 'jk')
     click_button('Send')
-    expect(page).to have_content("Your word is a palindrome")
+    expect(page).to have_content("is a palindrome")
   end
 end

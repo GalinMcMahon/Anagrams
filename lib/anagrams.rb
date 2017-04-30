@@ -8,7 +8,7 @@ class String
     array_intersection = array1 & array2
     array_intersection
     if array_intersection == []
-      anti_output = "These words are antigrams (no shared letters)"
+      anti_output = "But they are antigrams (no shared letters)"
     else
       false
     end
@@ -37,21 +37,21 @@ class String
   define_method(:anagrams) do |word2|
     word1 = self.downcase.chars.sort
     word2 = word2.downcase.chars.sort
-    if word1 == word2
-      returned_output = "These words are anagrams!"
-    else
-      returned_output = "These aren't anagrams."
-    end
-    returned_output
+      if word1 == word2
+        returned_output = " are anagrams!"
+      else word1 != word2
+        returned_output = " aren't anagrams."
+      end
+      returned_output
   end
 
   define_method(:palindromes) do
     pal_word1 = self
     pal_word_reversed = self.reverse()
     if pal_word1 == pal_word_reversed
-      palindrome_output = "Your word is a palindrome"
+      palindrome_output = "is a palindrome"
     else
-      palindrome_output = "Your word is not a palindrome"
+      palindrome_output = "is not a palindrome"
     end # ends if statement
     palindrome_output
 

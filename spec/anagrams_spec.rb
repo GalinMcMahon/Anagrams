@@ -21,7 +21,7 @@ describe('String')
 
   describe('#palindromes') do
     it("returns a true or false statement based on whether the input word is a palindrome") do
-      expect(("radar").palindromes()).to(eq("Your word is a palindrome"))
+      expect(("radar").palindromes()).to(eq("is a palindrome"))
     end
   end
 
