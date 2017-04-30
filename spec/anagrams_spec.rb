@@ -12,7 +12,6 @@ describe('String')
       expect("sTOp".anagrams("tops")).to(eq("These words are anagrams!"))
     end
 
-
   describe('#vowel_check') do
     it("checks words to make sure a vowel exists") do
       expect("stp".vowel_check("jk")).to(eq("You need to use words with vowels."))
@@ -36,6 +35,4 @@ describe('String')
       expect(" hello there ".whitespace(" hello there ")).to(eq("hellothere"))
     end
   end
-
-
 end
